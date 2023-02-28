@@ -3,7 +3,7 @@ const track = document.getElementById("image-track");
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
 const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
+  track.dataset.mouseDownAt = "0";
   track.dataset.prevPercentage = track.dataset.percentage;
 }
 
@@ -13,9 +13,9 @@ const handleOnMove = e => {
   const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
   
-  const percentage = (mouseDelta / maxDelta) * -100,
+  const percentage = (mouseDelta / maxDelta) * - 100,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 50), - 100);
   
   track.dataset.percentage = nextPercentage;
   
@@ -25,12 +25,10 @@ const handleOnMove = e => {
   
   for(const image of track.getElementsByClassName("image")) {
     image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
+      objectPosition: `${75 + nextPercentage}% center`
     }, { duration: 1200, fill: "forwards" });
   }
 }
-
-/* -- Had to add extra lines for touch events -- */
 
 window.onmousedown = e => handleOnDown(e);
 
