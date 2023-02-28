@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#title{
+    color: white;
+    font-size:10vw;
+    font-family: retroFont;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: black;
+    scroll-snap-type: y mandatory;
+}
+
+main > section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+}
+
+main > section > div {
+    font-size: 1vw;
+    font-weight: 700;
+    color: #fff;
+}
+
+@font-face {
+    font-family: retroFont;
+    src: url(Silver.ttf);
+}
+
