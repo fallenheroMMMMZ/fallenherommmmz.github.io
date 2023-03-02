@@ -14,8 +14,19 @@
 <body>
 
     <main>
-        <section id="section-0">
-            <h1 id="title">Fallen Hero</h1>
+        <section id="section-0" class="container">
+            <video autoplay muted loop id="myVideo">
+                <source src="skyloop.mp4" type="video/mp4">
+              </video>
+              <div id="overlayText">
+                <h1 id="title">Fallen Hero</>
+                    <div id="bottom" class="arrow" onclick="smoothScroll(document.getElementById('section-1'))">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                
+            </div>
         </section>
         <section id="section-1">
             <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
