@@ -34,7 +34,8 @@
     text-align: center;
     font-size: 30px;
     padding: 20px;
-    font-family: 'Press Start 2P', cursive;
+    padding-bottom: 10px;
+    font-family: retroFont;
     text-decoration: none; 
     color: white;
     box-shadow: inset (-4px) (-4px) 0px 0px #4AA52E;
